@@ -2,6 +2,10 @@ module.exports = (sequelize, DataTypes) => {
   const Plan = sequelize.define(
     'Plan',
     {
+      plan_id: {
+        primaryKey: true,
+        type: DataTypes.INTEGER,
+      },
       coverage: DataTypes.STRING,
       price: DataTypes.DOUBLE,
     },

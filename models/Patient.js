@@ -2,6 +2,10 @@ module.exports = (sequelize, DataTypes) => {
   const Patient = sequelize.define(
     'Patient',
     {
+      patient_id: {
+        primaryKey: true,
+        type: DataTypes.INTEGER,
+      },
       fullName: DataTypes.STRING,
       plan_id: DataTypes.INTEGER,
     },
