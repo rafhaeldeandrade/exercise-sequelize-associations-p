@@ -1,8 +1,6 @@
-"use strict";
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    const PatientsTable = queryInterface.createTable("Patients", {
+    const PatientsTable = queryInterface.createTable('Patients', {
       patient_id: {
         allowNull: false,
         autoIncrement: true,
@@ -26,5 +24,5 @@ module.exports = {
     return PatientsTable;
   },
 
-  down: async (queryInterface) => queryInterface.dropTable("Patients"),
+  down: async (queryInterface) => queryInterface.dropTable('Patients'),
 };
