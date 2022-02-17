@@ -15,8 +15,9 @@ route.get('/surgeries', async (_req, res) => {
   const patients = await Patient.findAll({
     include: [{ model: Surgery, as: 'surgeries' }],
   });
-  console.log(patients);
+
   return res.status(200).json(patients);
 });
+
 
 module.exports = route;
